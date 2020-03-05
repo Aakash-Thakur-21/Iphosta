@@ -6,11 +6,20 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-    test : Date = new Date();
+    constructor() { }
+    test: Date = new Date();
     focus;
     focus1;
     focus2;
-    constructor() { }
+    public selectedValue: string;
 
-    ngOnInit() {}
+
+
+    ngOnInit() {
+        this.selectedValue = 'UserType';
+    }
+    public  checkUser(string) {
+        // alert('hi');
+        this.selectedValue = string;
+    }
 }

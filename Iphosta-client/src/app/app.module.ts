@@ -15,26 +15,30 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-
+import { IgxRadioModule } from 'igniteui-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignupComponent,
-    LandingComponent,
-    ProfileComponent,
-    NavbarComponent,
-    FooterComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule.forRoot(),
-    FormsModule,
-    RouterModule,
-    AppRoutingModule,
-    HomeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        SignupComponent,
+        LandingComponent,
+        ProfileComponent,
+        NavbarComponent,
+        FooterComponent,
+        LoginComponent
+    ],
+    imports: [
+        BrowserModule,
+        NgbModule.forRoot(),
+        FormsModule,
+        RouterModule,
+        AppRoutingModule,
+        HomeModule,
+        IgxRadioModule,
+        BrowserAnimationsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

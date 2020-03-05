@@ -61,11 +61,22 @@
                     </div>
                     <input class="form-control" placeholder="Password" type="password" (focus)="focus2=true" (blur)="focus2=false">
                   </div>
+                  <div class="text-muted font-italic">
+                    <small>password strength:
+                      <span class="text-success font-weight-700">strong</span>
+                    </small>
+                  </div>
                 </div>
-                <div class="text-muted font-italic">
-                  <small>password strength:
-                    <span class="text-success font-weight-700">strong</span>
-                  </small>
+                
+                <div class="" ngbDropdown>
+                  <button class="btn btn-secondary dropdown-toggle mt-4" type="button" id="dropdownMenuButton" ngbDropdownToggle style="font-color: #969094;">
+                    {{selectedValue}}
+                  </button>
+                  <div class="" aria-labelledby="dropdownMenuButton" ngbDropdownMenu>
+                    <a class="dropdown-item" (click)="checkUser('Admin')">Admin</a>
+                    <a class="dropdown-item" (click)="checkUser('User')">User</a>
+                    <a class="dropdown-item" (click)="checkUser('Something')">Something</a>
+                  </div>
                 </div>
                 <div class="row my-4">
                   <div class="col-12">
